@@ -11,7 +11,7 @@ app.use(cors()); // Usa el middleware de CORS
 
 // Sincronizar la base de datos: crea las tablas si no existen
 async function syncDatabase() {
-    await sequelize.sync({ force: true }); // `force: true` borra y recrea las tablas
+    await sequelize.sync();
     console.log('Base de datos sincronizada');
 }
 syncDatabase();
